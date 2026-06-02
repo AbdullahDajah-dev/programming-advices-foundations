@@ -21,5 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="homworks.txt" />
+    <Text Include="bike_info.txt" />
   </ItemGroup>
 </Project>

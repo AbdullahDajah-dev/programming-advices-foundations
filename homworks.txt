@@ -192,8 +192,6 @@ cin >> bill_value;
 cout << "Enter tax %: ";
 cin >> tax_perc;
 
-// Services fee is 10%
-
 float services_fee = bill_value * 0.1;  // fee value only
 float subtotal_fee = bill_value * 1.1;  // bill+fee
 float tax = subtotal_fee * (tax_perc / 100); // tax value only if i want to calculate the the total bill right away without the next step, tax = subtotal_fee + (subtotal_fee * (tax_perc / 100)) ,
