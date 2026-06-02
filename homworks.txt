@@ -1,0 +1,286 @@
+#7
+
+float num1, num2;
+cout << "Enter number 1: ";
+cin >> num1;
+cout << "Enter number 2: ";
+cin >> num2;
+float HalfNum1 = num1 / 2;
+float HalfNum2 = num2 / 2;
+cout << "\nHalf of number " << num1 << " is " << HalfNum1;
+cout << "\nHalf of number " << num2 << " is " << HalfNum2;
+cout << endl << endl;
+
+
+
+#9
+
+float numA, numB, numC;
+
+cout << "First number: ";
+cin >> numA;
+cout << "Second number: ";
+cin >> numB;
+cout << "Third number: ";
+cin >> numC;
+cout << "\n\nResult is >> " << numA + numB + numC << "\n\n";
+
+
+#10
+
+short mark1, mark2, mark3;
+
+cout << "Please enter your marks in order\n\n";
+
+cout << "Mark(1): ";
+cin >> mark1;
+cout << "Mark(2): ";
+cin >> mark2;
+cout << "Mark(3): ";
+cin >> mark3;
+
+float Avg = (mark1 + mark2 + mark3) / 3;
+
+cout << "\nYour avg is " << Avg << endl << endl;
+
+
+#14
+
+short num1, num2;
+
+cout << "Please enter the first number: ";
+cin >> num1;
+cout << "Please enter the second number: ";
+cin >> num2;
+
+cout << "Your numbers are >> " << num1 << "," << num2 << "\n";
+
+ short num3 = num1;
+ num1 = num2;
+ num2 = num3;
+
+cout << "and the rev is >> " << num1 << "," << num2 << "\n\n";
+
+
+#15
+
+float A, B;
+cout << "please enter (A): ";
+cin >> A;
+cout << "please enter (B): ";
+cin >> B;
+
+float R = A * B;
+cout << R;
+
+#17
+
+float A, H;
+
+cout << "Please enter A: ";
+cin >> A;
+cout << "Please enter H: ";
+cin >> H;
+
+float R = A / 2 * H;
+cout << R;
+
+#19
+
+float A;
+const float PI = 3.14;
+cout << "please enter A: ";
+cin >> A;
+
+float R = (PI * A * A) / 4;
+cout << R;
+
+
+#20
+
+float A;
+const float PI = 3.14;
+cout << "Please enter A: ";
+cin >> A;
+
+float R = (PI * A * A) / 4;
+cout << R;
+
+
+#21
+
+float L;
+const float PI = 3.14;
+cout << "Enter L: ";
+cin >> L;
+
+float R = (L * L) / (4 * PI);
+cout << R;
+
+#22
+
+float A, B;
+const float PI = 3.14;
+
+cout << "Enter A: ";
+cin >> A;
+cout << "Enter B: ";
+cin >> B;
+
+float R = ((PI * B * B) / 4) * ((2 * A - B) / (2 * A + B));
+cout << R;
+
+
+#31
+
+float A;
+cout << "Enter number: ";
+cin >> A;
+
+float R1 = A * A;
+float R2 = R1 * A;
+float R3 = R2 * A;
+  
+ cout << A << "^2 = " << R1 << "\n" << A << "^3 = " << R2 << "\n" << A << "^4 = " << R3 << "\n\n";
+
+
+
+#35
+
+unsigned short Pennies, Nickels, Dimes, Quarters, Dollars;
+
+cout << "Please enter the information in order\n\n";
+
+cout << "Pennies: ";
+cin >> Pennies;
+cout << "Nickels: ";
+cin >> Nickels;
+cout << "Dimes: ";
+cin >> Dimes;
+cout << "Quarters: ";
+cin >> Quarters;
+cout << "Dollars: ";
+cin >> Dollars;
+
+unsigned int total_pennies = Pennies + (Nickels * 5) + (Dimes * 10) + (Quarters * 25) + (Dollars * 100);
+unsigned int total_dollars = total_pennies / 100;
+
+cout << "\nYou have: " << total_pennies << " Pennies.\n";
+cout << "Which is: " << total_dollars << " Dollars.\n";
+
+#39
+
+float total_bill, cashpaid;
+
+cout << "Please enter total bill: ";
+cin >> total_bill;
+cout << "please enter cash paid: ";
+cin >> cashpaid;
+
+float remainder = cashpaid - total_bill;
+
+cout << "Change is: " << remainder << "\n\n";
+
+#40
+
+float bill_value, tax_perc;
+
+
+cout << "Enter bill value: ";
+cin >> bill_value;
+
+cout << "Enter tax %: ";
+cin >> tax_perc;
+
+// Services fee is 10%
+
+float services_fee = bill_value * 0.1;  // fee value only
+float subtotal_fee = bill_value * 1.1;  // bill+fee
+float tax = subtotal_fee * (tax_perc / 100); // tax value only if i want to calculate the the total bill right away without the next step, tax = subtotal_fee + (subtotal_fee * (tax_perc / 100)) ,
+
+// another way to say it is >> tax = subtotal_fee * (1+(tax_perc/100)) >> common factor 
+
+float total = subtotal_fee + tax;
+
+
+cout << "sub total: " << bill_value << "$\n";
+cout << "Services fee (10%) = " << services_fee << "$\n";
+cout << "Tax (" << tax_perc << "%) = " << tax << "$\n";
+cout << "--------------------------------\n";
+cout << "Total: " << total << endl;
+
+#42
+
+int days, hours, minutes, seconds;
+    
+
+cout << "How many days? ";
+cin >> days;
+
+cout << "How many hours? ";
+cin >> hours;
+
+cout << "How many minutes? ";
+cin >> minutes;
+
+cout << "How many seconds? ";
+cin >> seconds;
+
+int total_seconds = (days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60) + 60;
+
+cout << "\nTotal time needed to finish task is: " << total_seconds << " seconds!\n\n";
+
+
+#43
+
+int total_seconds;
+
+cout << "How many seconds? ";
+cin >> total_seconds;
+
+int days = total_seconds / (24 * 60 * 60 * 1);
+int remainder = total_seconds % (24 * 60 * 60);
+int hours = remainder / (60 * 60);
+remainder = remainder % (60 * 60);
+int minutes = remainder / 60;
+remainder = remainder % 60;
+      
+
+       
+
+cout << days << " : ";
+cout << hours << " : ";
+cout << minutes << " : ";
+cout << remainder;
+       
+cout << endl << endl;
+
+#47
+
+int loan_amount, monthly_payment;
+
+cout << "Loan amount? ";
+cin >> loan_amount;
+
+cout << "Monthly payment? ";
+cin >> monthly_payment;
+
+int month = (loan_amount / monthly_payment);
+
+cout << month << " months.\n\n";
+
+#48
+
+
+ int loan_value, months;
+
+ cout << "Loan Amount? ";
+ cin >> loan_value;
+ 
+ cout << "How many months? ";
+ cin >> months;
+
+ float monthly_payment = loan_value / months;
+
+ cout << monthly_payment << " Dollars.";
+
