@@ -17,6 +17,7 @@ struct OwnerInfo
 
 	string fullname;
 	string adress;
+	Contact contact;
 
 
 };
@@ -28,9 +29,8 @@ struct Bike
 	string Model;
 	int year;
 	string engine;
-	OwnerInfo name;
-	Contact cphone;
-	Contact e_mail;
+	OwnerInfo owner;
+	
 
 
 };
@@ -54,13 +54,13 @@ int main()
 	cout << "Year: ";
 	cin >> bike1.year;
 	cout << "Name: ";
-	cin >> bike1.name.fullname;
+	cin >> bike1.owner.fullname;
 	cout << "Adress: ";
-	cin >> bike1.name.adress;
+	cin >> bike1.owner.adress;
 	cout << "Phone: ";
-	cin >> bike1.cphone.cell_number;
+	cin >> bike1.owner.contact.cell_number;
 	cout << "E-mail: ";
-	cin >> bike1.e_mail.Email;
+	cin >> bike1.owner.contact.Email;
 
 	cout << endl << endl;
 
@@ -75,13 +75,13 @@ int main()
 	cout << "Year: ";
 	cin >> bike2.year;
 	cout << "Name: ";
-	cin >> bike2.name.fullname;
+	cin >> bike2.owner.fullname;
 	cout << "Adress: ";
-	cin >> bike2.name.adress;
+	cin >> bike2.owner.adress;
 	cout << "Phone: ";
-	cin >> bike2.cphone.cell_number;
+	cin >> bike2.owner.contact.cell_number;
 	cout << "E-mail: ";
-	cin >> bike2.e_mail.Email;
+	cin >> bike2.owner.contact.Email;
 
 	cout << endl << endl;
 	
@@ -90,15 +90,14 @@ int main()
 	cout << "--Bike Information:\n\n";
 	cout << "Brand: " << bike1.Brand << "  " << "Model: " << bike1.Model << "  " << "Engine: " << bike1.engine << "cc " << "Year: " << bike1.year << "\n\n";
 	cout << "--Owner Information:\n\n";
-	cout << "Full Name: " << bike1.name.fullname << " || Adress: " << bike1.name.adress << " || Phone: " << bike1.cphone.cell_number << " || E-mail: " << bike1.e_mail.Email << endl << endl;
+	cout << "Full Name: " << bike1.owner.fullname << " || Adress: " << bike1.owner.adress << " || Phone: " << bike1.owner.contact.cell_number << " || E-mail: " << bike1.owner.contact.Email << endl << endl;
 	
 	cout << "************************\n\n";
 
-	
 	cout << "--Bike Information:\n\n";
 	cout << "Brand: " << bike2.Brand << "  " << "Model: " << bike2.Model << "  " << "Engine: " << bike2.engine << "cc " << "Year: " << bike2.year << "\n\n";
 	cout << "--Owner Information:\n\n";
-	cout << "Full name: " << bike2.name.fullname << " || Adress: " << bike2.name.adress << " || Phone: " << bike2.cphone.cell_number << " || E-mail: " << bike2.e_mail.Email << endl;
+	cout << "Full name: " << bike2.owner.fullname << " || Adress: " << bike2.owner.adress << " || Phone: " << bike2.owner.contact.cell_number << " || E-mail: " << bike2.owner.contact.Email << endl;
 
 
 
