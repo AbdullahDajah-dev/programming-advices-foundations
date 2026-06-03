@@ -3,7 +3,9 @@
 
 using namespace std;
 
-struct Contact
+enum enColor { black = 1, red, blackAndred };
+
+struct stContact
 {
 	string cell_number;
 	string Email;
@@ -12,24 +14,25 @@ struct Contact
 
 };
 
-struct OwnerInfo
+struct stOwnerInfo
 {
 
 	string fullname;
 	string adress;
-	Contact contact;
+	stContact contact;
 
 
 };
 
-struct Bike
+struct stBike
 {
 
 	string Brand;
 	string Model;
-	int year;
+	string year;
 	string engine;
-	OwnerInfo owner;
+	stOwnerInfo owner;
+	enColor color;
 
 
 
@@ -39,12 +42,13 @@ struct Bike
 int main()
 {
 
+	stBike bike1, bike2;
 
 
+	bike1.color = enColor::blackAndred;
+	bike2.color = enColor::blackAndred;
 
-	Bike bike1, bike2;
-
-
+	cout << "** Bike (1) **\n\n";
 	cout << "Brand: ";
 	cin >> bike1.Brand;
 	cout << "Model: ";
@@ -53,6 +57,7 @@ int main()
 	cin >> bike1.engine;
 	cout << "Year: ";
 	cin >> bike1.year;
+	cout << "\n\nOwner's information\n\n";
 	cout << "Name: ";
 	cin >> bike1.owner.fullname;
 	cout << "Adress: ";
@@ -74,6 +79,7 @@ int main()
 	cin >> bike2.engine;
 	cout << "Year: ";
 	cin >> bike2.year;
+	cout << "\n\nOwner's information\n\n";
 	cout << "Name: ";
 	cin >> bike2.owner.fullname;
 	cout << "Adress: ";
@@ -88,14 +94,14 @@ int main()
 
 
 	cout << "--Bike Information:\n\n";
-	cout << "Brand: " << bike1.Brand << "  " << "Model: " << bike1.Model << "  " << "Engine: " << bike1.engine << "cc " << "Year: " << bike1.year << "\n\n";
+	cout << "Brand: " << bike1.Brand << "  Model: " << bike1.Model << "  Engine: " << bike1.engine << "  cc " << "  Year: " << bike1.year << "  Color: " << bike1.color << "\n\n";
 	cout << "--Owner Information:\n\n";
 	cout << "Full Name: " << bike1.owner.fullname << " || Adress: " << bike1.owner.adress << " || Phone: " << bike1.owner.contact.cell_number << " || E-mail: " << bike1.owner.contact.Email << endl << endl;
 
 	cout << "************************\n\n";
 
 	cout << "--Bike Information:\n\n";
-	cout << "Brand: " << bike2.Brand << "  " << "Model: " << bike2.Model << "  " << "Engine: " << bike2.engine << "cc " << "Year: " << bike2.year << "\n\n";
+	cout << "Brand: " << bike2.Brand << "  Model: " << bike2.Model << "  Engine: " << bike2.engine << "  cc " << "  Year: " << bike2.year << "  Color: " << bike2.color << "\n\n";
 	cout << "--Owner Information:\n\n";
 	cout << "Full name: " << bike2.owner.fullname << " || Adress: " << bike2.owner.adress << " || Phone: " << bike2.owner.contact.cell_number << " || E-mail: " << bike2.owner.contact.Email << endl;
 

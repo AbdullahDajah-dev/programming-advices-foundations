@@ -1,0 +1,33 @@
+enum Color { Red, Yellow, Blue, Black };
+enum Gender { Male, Female };
+enum Status { Single, Married };
+
+int main()
+{
+
+	Color ycolor;
+	Gender ygender;
+	Status ystatus;
+	string yname, ycountry, ycity;
+	unsigned yMonthIncome, yage;
+
+	ycolor = Color::Black;
+	ygender = Gender::Male;
+	ystatus = Status::Single;
+	yname = "Abdullah Al-Dajah";
+	ycountry = "Jordan", ycity = "Amman";
+	yMonthIncome = 850;
+	yage = 27;
+	
+
+
+
+
+	cout << "Name: " << yname;
+	cout << "\nAge: " << yage;
+	cout << "\nGender(male/female): " << ygender;
+	cout << "\nCountry: " << ycountry;
+	cout << "\nCity: " << ycity;
+	cout << "\nStatus(single/married): " << ystatus;
+	cout << "\nMonthly income / in a year: " << yMonthIncome << " / " << yMonthIncome * 12 << " A year";
+	cout << "\nFav color: " << ycolor << endl;
