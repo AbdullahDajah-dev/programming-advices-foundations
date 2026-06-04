@@ -1,0 +1,74 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+
+void MyId()
+{
+
+	cout << "****************************\n";
+	cout << "Name: Abdullah Al-Dajah\n";
+	cout << "Age: 27\n";
+	cout << "Country: Jordan\n";
+	cout << "City: Amman\n";
+	cout << "****************************" << endl << endl;
+
+}
+
+void Stars() 
+{
+
+
+	cout << "****************************\n";
+	cout << "****************************\n";
+	cout << "****************************\n";
+	cout << "****************************\n";
+	cout << "****************************" << endl << endl;
+
+}
+
+void Words()
+{
+
+	cout << "I love programming!\n\nI promise to be the best developer ever!\n\nI know it will take quite some time to practice, but I will achieve my goal!.\n\n";
+	cout << "Best regards.\nAbdullah Al-dajah." << endl << endl;
+
+
+}
+
+void stars_H()
+{
+	
+	cout << "*     *\n";
+	cout << "*     *\n";
+	cout << "* * * *\n";
+	cout << "*     *\n";
+	cout << "*     *\n";
+	cout << endl << endl;
+
+}
+
+
+
+
+int main () {
+
+
+
+	cout << "--(My ID card)\n\n";
+	MyId();
+	cout << "--(Stars)\n\n";
+	Stars();
+	cout << "--(Random words :D)\n\n";
+	Words();
+	cout << "\n--(H of stars)\n\n";
+	stars_H();
+
+
+
+
+	
+
+	return 0;
+}
