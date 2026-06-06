@@ -35,7 +35,7 @@ struct stBike
 
 };
 
-void readinfo(stBike &bike)
+void readinfo(stBike& bike)
 {
 	cout << "-- Bike info\n";
 	cout << "Brand: ";
@@ -72,17 +72,16 @@ void readinfo(stBike &bike)
 
 
 }
-
 void printinfo(stBike bike)
 {
 	cout << "\n\n===============================\n\n";
 	cout << "         Bike info\n\n";
 	cout << "===============================\n\n";
-	cout <<"Brand  : " << bike.brand << "\n";
+	cout << "Brand  : " << bike.brand << "\n";
 	cout << "Model  : " << bike.model << "\n";
 	cout << "Year   : " << bike.year << "\n";
 	cout << "Engine : " << bike.engine << "\n";
-	
+
 	cout << "\n\n===============================\n\n";
 	cout << "         Owner's info\n\n";
 	cout << "===============================\n\n";
@@ -104,15 +103,29 @@ void printinfo(stBike bike)
 
 }
 
+void ReadBikes(stBike bikes[2])
+{
+	readinfo(bikes[0]);
+	readinfo(bikes[1]);
+
+}
+void PrintBikes(stBike bikes[2])
+{
+
+	printinfo(bikes[0]);
+	printinfo(bikes[1]);
+}
 
 
-int main(){
 
-	stBike bikeinfo;
-	readinfo(bikeinfo);
-	printinfo(bikeinfo);
-	
-	
+
+int main() {
+
+	stBike bikes[2];
+
+	ReadBikes(bikes);
+	PrintBikes(bikes);
+
 
 
 	return 0;

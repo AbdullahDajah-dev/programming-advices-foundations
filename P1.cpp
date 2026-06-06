@@ -72,7 +72,6 @@ void readinfo(stBike& bike)
 
 
 }
-
 void printinfo(stBike bike)
 {
 	cout << "\n\n===============================\n\n";
@@ -104,14 +103,28 @@ void printinfo(stBike bike)
 
 }
 
+void ReadBikes(stBike bikes[2])
+{
+	readinfo(bikes[0]);
+	readinfo(bikes[1]);
+
+}
+void PrintBikes(stBike bikes[2])
+{
+
+	printinfo(bikes[0]);
+	printinfo(bikes[1]);
+}
+
+
 
 
 int main() {
 
-	stBike bikeinfo;
-	readinfo(bikeinfo);
-	printinfo(bikeinfo);
+	stBike bikes[2];
 
+	ReadBikes(bikes);
+	PrintBikes(bikes);
 
 
 
