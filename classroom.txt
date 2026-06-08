@@ -1,0 +1,130 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+
+struct marks {
+
+	float mark1;
+	float mark2;
+	float mark3;
+	
+};
+
+
+void readmarks(marks &grades, int id)
+
+{
+	cout << "========================\n";
+	cout << "Enter Marks " << id << "\n";
+	cout << "========================\n\n";
+
+	cout << "Enter mark1: ";
+	cin >> grades.mark1;
+	cout << "Enter mark2: ";
+	cin >> grades.mark2;
+	cout << "Enter mark3: ";
+	cin >> grades.mark3;
+	cout << endl;
+
+}
+void printavg(marks avg, int id)
+
+{
+	float R = (avg.mark1 + avg.mark2 + avg.mark3) / 3;
+
+	if (R >= 50) {
+
+		cout << "\nStudent " << id << " Avg is " << R << " Passed!";
+	}
+	else {
+
+		cout << "\nStudent " << id << " Avg is " << R << " Failed!";
+	} cout << endl;
+
+}
+
+void readAllstudents(marks students[2])
+{
+	readmarks(students[0], 1);
+	readmarks(students[1], 2);
+
+}
+void printAllstudents(marks students[2])
+{
+	printavg(students[0], 1);
+	printavg(students[1], 2);
+}
+
+void CheckClassWinner(marks winner[2])
+{
+	float avg1 = (winner[0].mark1 + winner[0].mark2 + winner[0].mark3) / 3;
+	float avg2 = (winner[1].mark1 + winner[1].mark2 + winner[1].mark3) / 3;
+
+	cout << "\n========================\n";
+
+	if (avg1 > avg2) {
+		
+		cout << "Student number 1 is the winner!";
+
+	}
+	else if (avg2 > avg1){
+
+		cout << "Student number 2 is the winner!";
+	}
+	else {
+		cout << "Both has the same Avg!";
+	}
+
+	cout << endl << endl;
+}
+void HighestMark(marks highestgrade[2])
+{
+	cout << "========================\n";
+	float highest1 = highestgrade[0].mark1;
+	if (highestgrade[0].mark2 > highest1)
+		highest1 = highestgrade[0].mark2;
+	if (highestgrade[0].mark3 > highest1)
+		highest1 = highestgrade[0].mark3;
+
+	float highest2 = highestgrade[1].mark1;
+	if (highestgrade[1].mark2 > highest2)
+		highest2 = highestgrade[1].mark2;
+	if (highestgrade[1].mark3 > highest2)
+		highest2 = highestgrade[1].mark3;
+
+	if (highest1 > highest2)
+	{
+		cout << "Highest grade is : " << highest1 << ", For student number " << "\"1\"";
+
+	}
+	else if (highest2 > highest1)
+	{
+		cout << "Highest grade is : " << highest2 << ", For student number " << "\"2\"";
+
+
+	}
+	else
+	{
+		cout << "Both \"1\" and \"2\" have same Grades!";
+
+	} cout << endl << endl;
+
+
+}
+
+int main(){
+
+	marks students[2];
+	
+	readAllstudents(students);
+	printAllstudents(students);
+	CheckClassWinner(students);
+	HighestMark(students);
+
+
+	
+
+	return 0;
+}
