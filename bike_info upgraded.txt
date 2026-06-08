@@ -72,15 +72,27 @@ void PrintInfo(stBike info, int id)
 	cout << "--Bike Information " << id << "\n\n";
 	cout << "Brand: " << info.Brand << "  Model: " << info.Model << "  Engine: " << info.engine << "cc " << "  Year: " << info.year;
 
-	if (info.color == enColor::black) {
+	switch (info.color)
+
+	{
+	case enColor::black:
 		cout << "   Color: Black\n\n";
+		break;
+	case enColor::red:
+		cout << "  Color: Red\n\n";
+		break;
+	case enColor::blackAndred:
+		cout << "  Color: Back And Red\n\n";
+		break;
+
+	default:
+		cout << "  Color: Unknown!\n\n";
 	}
-	else if (info.color == enColor::red) {
-		cout << "   Color: red \n\n";
-	}
-	else {
-		cout << "   Color: Black And Red\n\n";
-	}
+	
+
+
+
+	
 
 	cout << "--Owner Information:\n\n";
 	cout << "Full Name: " << info.owner.fullname << " || Adress: " << info.owner.adress << " || Phone: " << info.owner.contact.cell_number << " || E-mail: " << info.owner.contact.Email << endl << endl;
