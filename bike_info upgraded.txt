@@ -68,7 +68,7 @@ void ReadInfo(stBike& info, int id)
 }
 void PrintInfo(stBike info, int id)
 {
-
+	
 	cout << "--Bike Information " << id << "\n\n";
 	cout << "Brand: " << info.Brand << "  Model: " << info.Model << "  Engine: " << info.engine << "cc " << "  Year: " << info.year;
 
@@ -92,7 +92,7 @@ void ReadAllbikes(stBike bikes[2])
 {
 	ReadInfo(bikes[0], 1);
 	ReadInfo(bikes[1], 2);
-
+	
 }
 void PrintAllbikes(stBike bikes[2])
 {
@@ -106,14 +106,14 @@ int main()
 {
 
 	stBike bike[2];
-
+	
 	ReadAllbikes(bike);
 	PrintAllbikes(bike);
 
+	
 
 
-
-
+	
 
 	return 0;
 }
