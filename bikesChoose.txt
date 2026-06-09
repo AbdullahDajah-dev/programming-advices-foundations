@@ -27,6 +27,11 @@ enBikes ReadBike()
 {
 	int bike;
 	cin >> bike;
+	while (bike < 1 || bike > 7)
+	{
+		cout << "Invalid selection! Please choose a valid bike number (1-7): ";
+		cin >> bike;
+	}
 	return (enBikes)bike;
 }
 string GetBikeData(enBikes bikes)
